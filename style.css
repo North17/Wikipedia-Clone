@@ -56,17 +56,15 @@ a{
     background-size: 30%;
 }
 
-#languages-graphic-left, #languages-graphic-right{
+#languages-graphic{
     display: flex;
+    flex-wrap: wrap;
+    gap: 0 22em;
     width: 100%;
     flex-direction: column;
     
     margin: 1.8em;
     max-height: 380px;
-}
-
-#languages-graphic-right{
-    align-items: flex-end;
 }
 
 .language-box{
@@ -99,20 +97,18 @@ a{
 
 /* Doing this because idk how to make a loop in css :/ */
 
-#languages-graphic-left > .language-box:nth-child(1){margin-left: 35%;}
-#languages-graphic-left > .language-box:nth-child(2){margin-left: 20%;}
-#languages-graphic-left > .language-box:nth-child(3){margin-left: 15%;}
-#languages-graphic-left > .language-box:nth-child(4){margin-left: 20%;}
-#languages-graphic-left > .language-box:nth-child(5){margin-left: 35%;}
+#languages-graphic > .language-box:nth-child(1){position: relative; left: 8em;}
+#languages-graphic > .language-box:nth-child(2){position: relative; left: 5em;}
+#languages-graphic > .language-box:nth-child(3){position: relative; left: 3em;}
+#languages-graphic > .language-box:nth-child(4){position: relative; left: 5em;}
+#languages-graphic > .language-box:nth-child(5){position: relative; left: 8em;}
 
-#languages-graphic-right > .language-box:nth-child(1){margin-right: 35%;}
-#languages-graphic-right > .language-box:nth-child(2){margin-right: 20%;}
-#languages-graphic-right > .language-box:nth-child(3){margin-right: 15%;}
-#languages-graphic-right > .language-box:nth-child(4){margin-right: 20%;}
-#languages-graphic-right > .language-box:nth-child(5){margin-right: 35%;}
-
-#searchbar{
-
+#languages-graphic > .language-box:nth-child(6){position: relative; right: 8em;}
+#languages-graphic > .language-box:nth-child(7){position: relative; right: 5em;}
+#languages-graphic > .language-box:nth-child(8){position: relative; right: 3em;}
+#languages-graphic > .language-box:nth-child(9){position: relative; right: 5em;}
+#languages-graphic > .language-box:nth-child(10){position: relative; right: 8em}
+#searchright
     margin: auto;
     width: 500px;
     height: 50px;
@@ -293,6 +289,7 @@ footer{
 }
 
 #wiki-found > img{
+    padding: 1em 0 0 1em;
     flex: 1;
     align-self: flex-start;
     width: 45px;
@@ -313,9 +310,12 @@ footer{
     display: flex;
     align-items: center;
     padding: 0.5em;
+    border-radius: 5px;
+    background-color: #f8f9fa;
 }
 
 #wiki-download > img{
+    margin: 1em 0 0 1em;
     flex: 1;
     width: 25px;
     border: solid 1px;
@@ -354,8 +354,22 @@ footer{
 }
 
 #wiki-apps{
+    display: flex;
     flex: 3;
-    background-color: blue;
+}
+
+.app-cont{
+    display: flex;
+}
+
+.app-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.app-info{
+    display: flex;
+    flex-direction: column;
 }
 
 #terms-box{
